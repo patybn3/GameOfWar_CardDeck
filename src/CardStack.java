@@ -65,17 +65,17 @@ public class CardStack implements Project1StackInterface<Card>
 
     @Override
     public int size() {
-        return 0;
+        return cardsStack.size();
     }
 
     @Override
     public void clear() {
-
+        cardsStack = new Stack<>();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return cardsStack.isEmpty();
     }
 
     public boolean isFull()
