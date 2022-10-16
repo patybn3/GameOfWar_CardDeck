@@ -1,9 +1,14 @@
 import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
 
 public class CardStack implements Project1StackInterface<Card>
 {
     private Stack<Card> cardsStack;
+    List<Card> drawComputer;
+    List<Card> drawPlayer2;
+    List<Card> discardComputer;
+    List<Card> discardPlayer2;
     protected int countOne = 0;
     protected int countTwo = 0;
 
@@ -91,6 +96,9 @@ public class CardStack implements Project1StackInterface<Card>
     {
         //we are looping through the cards in the deck
         Collections.shuffle(cardsStack);
+        //cut cards
+        drawComputer = cardsStack.subList(26, 51);
+        drawPlayer2 = cardsStack.subList(0, 26);
     }
 
     public void playCards()
