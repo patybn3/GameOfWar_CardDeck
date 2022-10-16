@@ -34,18 +34,33 @@ public class CardStack implements Project1StackInterface<Card>
     }
 
     @Override
-    public Card pop() {
-        return null;
+    public Card pop()
+    {
+        if(isEmpty())
+        {
+            throw new StackUnderflowException("There are no cards to draw.");
+        }
+        else {
+            return cardsStack.pop();
+        }
     }
 
     @Override
-    public Card top() {
-        return null;
+    public Card top()
+    {
+        if(isEmpty())
+        {
+            throw new StackUnderflowException("There are no cards in the deck.");
+        }
+        else {
+            return cardsStack.peek();
+        }
     }
 
     @Override
     public Card popTop() {
-        return null;
+        top();
+        return pop();
     }
 
     @Override
