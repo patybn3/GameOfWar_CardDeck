@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Stack;
 
 public class CardStack implements Project1StackInterface<Card>
@@ -82,5 +83,11 @@ public class CardStack implements Project1StackInterface<Card>
     // Returns false - a linked stack is never full
     {
         return !cardsStack.isEmpty();
+    }
+
+    public void shuffle()
+    {
+        //we are looping through the cards in the deck
+        Collections.shuffle(cardsStack);
     }
 }
