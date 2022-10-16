@@ -1,16 +1,17 @@
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
+//Scanner, Stack, List, Collections
+import java.util.*;
 
 public class CardStack implements Project1StackInterface<Card>
 {
-    private Stack<Card> cardsStack;
-    List<Card> drawComputer;
-    List<Card> drawPlayer2;
-    List<Card> discardComputer;
-    List<Card> discardPlayer2;
+    Scanner scnr = new Scanner(System.in);
+    protected Stack<Card> cardsStack;
+    protected List<Card> drawComputer;
+    protected List<Card> drawPlayer2;
+    protected List<Card> discardComputer;
+    protected List<Card> discardPlayer2;
     protected int countOne = 0;
     protected int countTwo = 0;
+    protected String userSelection = "";
 
     public CardStack()
     {
